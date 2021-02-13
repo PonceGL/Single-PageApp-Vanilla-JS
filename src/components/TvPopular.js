@@ -13,14 +13,19 @@ const TvPopular = async () => {
             ${tvs.results
               .map(
                 (tv) => `
-                <a href="/${tv.name.replace(
+                <a href="#/movie/${tv.id}/${tv.original_name.replace(
                   / /g,
                   '-'
-                )}" class="item_link-image">
+                )}" class="item_link-image" data-name="${
+                  tv.original_name
+                }" data-genreIds="${tv.genre_ids}">
                     <img class="item_image" src="https://www.themoviedb.org/t/p/w220_and_h330_face/${
                       tv.poster_path
                     }" alt=${tv.id}>
-                    <p class="item_title">${tv.name}</p>
+                    <p class="item_title">${tv.original_name}</p>
+                    <div class="item_vote-container">
+                      <p class="item_vote">${tv.vote_average}</p>
+                    </div>
                 </a>
             `
               )

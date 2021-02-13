@@ -7,7 +7,7 @@ const Home = async () => {
   const view = `
   <div class="Section">
     ${await MoviesPopular()}
-   /*  ${await MoviesTrendingWeek()}
+    ${await MoviesTrendingWeek()}
     ${await TvPopular()} */
   </div>
 `;

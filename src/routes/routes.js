@@ -1,6 +1,7 @@
 import Home from '../containers/Home';
 import NotFound404 from '../containers/NotFound404';
 import DetailsMovie from '../containers/DetailsMovie';
+import Genre from '../components/Genre';
 import Header from '../components/Header';
 import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
@@ -9,6 +10,7 @@ import resolveRoutes from '../utils/resolveRoutes';
 const routes = {
   '/': Home,
   '/movie/': DetailsMovie,
+  '/genre/': Genre,
   /* '/register': Register, */
 };
 

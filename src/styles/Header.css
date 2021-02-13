@@ -1,8 +1,117 @@
 header {
+  width: 100%;
+  height: 200px;
   padding: 20px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container_logo {
+  width: 30%;
+}
+
+.Logo_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Logo {
-  width: 80px;
+  width: 35%;
+  margin: 5px auto;
+}
+
+.Title {
+  margin: 5px auto;
+  color: #fff;
+}
+
+.Title:hover {
+  color: #fc8621;
+}
+
+.search_and-genre {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search {
+  width: 90%;
+  height: 30px;
+  padding-left: 10px;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 5px 0 0 5px;
+  background-color: #fff;
+}
+
+.search::placeholder {
+  color: #43656c;
+  text-transform: capitalize;
+}
+
+.search:focus {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.search:focus::placeholder {
+  color: #fff;
+}
+
+.loupe_container {
+  width: 10%;
+  height: 30px;
+  padding: 0 5px;
+  line-height: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fc8621;
+  border-radius: 0 5px 5px 0;
+}
+
+.loupe {
+  height: 90%;
+  object-fit: contain;
+}
+
+.genre_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.genre_element {
+  margin: 3px;
+  padding: 5px;
+}
+
+.genre_name {
+  color: #fff;
+}
+
+.genre_name:hover {
+  color: #fc8621;
 }
