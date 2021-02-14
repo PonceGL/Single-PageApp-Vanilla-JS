@@ -1,6 +1,7 @@
 import getData from '../utils/getData';
 import API_KEY from '../apikey';
-const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
+const { TMDB } = API_KEY();
+const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${TMDB}`;
 
 const Genre = async () => {
   const data = await getData(URL);

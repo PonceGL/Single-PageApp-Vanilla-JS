@@ -2,30 +2,57 @@ header {
   width: 100%;
   height: 200px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 80px 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
-.container_logo {
-  width: 30%;
-}
+.Menu_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #1b1b45;
 
-.Logo_link {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 }
 
+.Menu_list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Menu_item {
+  margin: 0 10px;
+  padding: 5px;
+}
+
+.Menu_link {
+  color: #fff;
+  font-weight: 400;
+}
+
+.Logo_link {
+  width: 30%;
+}
+
+.container_logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .Logo {
-  width: 35%;
-  margin: 5px auto;
+  width: 25%;
+  margin: 5px;
 }
 
 .Title {
-  margin: 5px auto;
+  margin: 5px;
   color: #fff;
 }
 
@@ -40,7 +67,6 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .search_container {
@@ -119,9 +145,7 @@ header {
 }
 
 .buton_menu {
-  position: absolute;
-  top: 15px;
-  right: -5px;
+  position: relative;
   width: 35px;
   height: 35px;
   border-radius: 5px;
@@ -161,7 +185,7 @@ header {
 }
 
 .twoOpen {
-  transform: translate(115%);
+  width: 0;
   border: 1px solid #1b1b45;
 }
 
@@ -180,14 +204,45 @@ header {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .search_and-genre {
-    width: 60%;
-    justify-content: flex-end;
+@media screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+    height: initial;
   }
 
-  .search {
-    width: 80%;
+  .Logo_link {
+    width: 100%;
+  }
+
+  .container_logo {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search_and-genre {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .genre_container {
+    margin-top: 20px;
+  }
+
+  .Section_title-container {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container_logo {
+    width: 100%;
+  }
+
+  .search_container {
+    width: 70%;
   }
 
   .loupe_container {
@@ -195,15 +250,19 @@ header {
   }
 
   .genre_container {
+    width: 70%;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 20px;
+    padding: 120px 20px 0;
+    margin: 0;
 
     position: fixed;
     top: 0;
     bottom: 0;
     left: 100%;
+    overflow: scroll;
 
     background-color: #1b1b45;
     z-index: 500;

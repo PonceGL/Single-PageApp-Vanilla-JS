@@ -1,6 +1,7 @@
 import getData from '../utils/getData';
 import API_KEY from '../apikey';
-const URL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`;
+const { TMDB } = API_KEY();
+const URL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${TMDB}`;
 import Logo from '../assets/camera-roll.svg';
 import loupe from '../assets/loupe.svg';
 import '../styles/Header.css';
@@ -9,12 +10,27 @@ const Header = async () => {
   const data = await getData(URL);
 
   const view = `
-      <div class="container_logo">
-        <a class"Logo_link" href="#/">
+      <nav class="Menu_container" id="Menu_container">
+        <ul class="Menu_list">
+          <li class="Menu_item">
+            <a href="#/login/" class="Menu_link" id="Login">Log in</a>
+          </li>
+          <li class="Menu_item">
+            <a href="#/join//" class="Menu_link" id="Join">Join</a>
+          </li>
+          <div class="Menu_item buton_menu" id="buton_menu">
+            <div class="line one"></div>
+            <div class="line two"></div>
+            <div class="line tree"></div>
+          </div>
+        </ul>
+      </nav>
+      <a class="Logo_link" href="#/">
+        <div class="container_logo">
           <img class="Logo" src="${Logo}" alt="Movies For All Logo">
           <h1 class="Title">Movies For All</h1>
-        </a>
-      </div>
+        </div>
+      </a>
       <div class="search_and-genre">
         <div class="search_container" id="search_containe">
           <input class="search" id="search" type="search" placeholder="Search">
@@ -36,11 +52,6 @@ const Header = async () => {
             )
             .join('')}
         </nav>
-        <div class="buton_menu" id="buton_menu">
-          <div class="line one"></div>
-          <div class="line two"></div>
-          <div class="line tree"></div>
-        </div>
       </div>
     `;
   return view;

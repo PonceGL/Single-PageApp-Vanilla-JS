@@ -8,7 +8,6 @@ const Home = async () => {
   inputSearch.addEventListener('keyup', (e) => {
     const movies = document.querySelectorAll('.item_link-image');
     const search = e.target.value.toLowerCase();
-    const titles = document.querySelectorAll('.Section_title-container');
     movies.forEach((movie) => {
       if (!movie.attributes[2].value.toLocaleLowerCase().includes(search)) {
         movie.style.display = 'none';
@@ -16,12 +15,6 @@ const Home = async () => {
         movie.style.display = 'block';
       }
     });
-
-    /* if (String(search).length > 0) {
-      titles.forEach((title) => (title.style.display = 'none'));
-    } else {
-      titles.forEach((title) => (title.style.display = 'block'));
-    } */
   });
 
   return `

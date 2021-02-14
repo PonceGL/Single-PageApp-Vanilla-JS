@@ -1,10 +1,11 @@
 import getData from '../utils/getData';
 import API_KEY from '../apikey';
+const { TMDB } = API_KEY();
 import '../styles/DetailsMovie.css';
 
 const DetailsMovie = async () => {
   const id = window.location.hash.slice(1).split('/')[2];
-  const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`;
+  const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB}`;
   const details = await getData(URL);
   const view = `
         <div class="Details-container">

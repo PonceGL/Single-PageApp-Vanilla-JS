@@ -1,4 +1,4 @@
-const Events = () => {
+const slidingMenu = () => {
   const menu = document.getElementById('buton_menu');
   const one = document.querySelector('.one');
   const two = document.querySelector('.two');
@@ -17,11 +17,11 @@ const Events = () => {
     window.location.hash.slice(1).toLocaleLowerCase().slice(0, 7) === '/movie/'
   ) {
     window.scroll({
-      top: 210,
+      top: 300,
       left: 100,
       behavior: 'smooth',
     });
     search.style.display = 'none';
   }
 };
-export default Events;
+export default slidingMenu;
