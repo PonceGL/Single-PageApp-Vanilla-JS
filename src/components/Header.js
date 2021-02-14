@@ -7,6 +7,7 @@ import '../styles/Header.css';
 
 const Header = async () => {
   const data = await getData(URL);
+
   const view = `
       <div class="container_logo">
         <a class"Logo_link" href="#/">
@@ -15,26 +16,31 @@ const Header = async () => {
         </a>
       </div>
       <div class="search_and-genre">
-        <div class="search_container">
-          <input class="search" type="search" placeholder="Busqueda">
+        <div class="search_container" id="search_containe">
+          <input class="search" id="search" type="search" placeholder="Search">
           <div class="loupe_container">
             <img class="loupe" src=${loupe} alt="loupe">
           </div>
         </div>
-        <nav class="genre_container">
+        <nav class="genre_container" id="genre_container">
           ${data.genres
             .map(
               (genre) => `
-              <li class="genre_element" data-genre_id="${genre.id}">
-                <a href="#/genre/${genre.id}/${genre.name.replace(
+            <li class="genre_element" data-genre_id="${genre.id}">
+            <a href="#/genre/${genre.id}/${genre.name.replace(
                 / /g,
                 '-'
               )}" class="genre_name">${genre.name}</a>
               </li>
-            `
+              `
             )
             .join('')}
         </nav>
+        <div class="buton_menu" id="buton_menu">
+          <div class="line one"></div>
+          <div class="line two"></div>
+          <div class="line tree"></div>
+        </div>
       </div>
     `;
   return view;

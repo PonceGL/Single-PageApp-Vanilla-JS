@@ -90,3 +90,23 @@
 .production_name {
   margin: 5px 0;
 }
+
+@media screen and (max-width: 500px) {
+  .Details-container {
+    flex-direction: column;
+    position: relative;
+    height: 1100px;
+    justify-content: flex-start;
+  }
+
+  .details_image-conatiner {
+    width: 100%;
+  }
+
+  .details_info-conatiner {
+    width: 100%;
+    position: absolute;
+    top: 400px;
+    left: 0;
+  }
+}

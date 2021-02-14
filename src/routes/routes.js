@@ -5,6 +5,7 @@ import Genre from '../components/Genre';
 import Header from '../components/Header';
 import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
+import Events from '../utils/Events';
 /* import Register from '../containers/Register';  */
 
 const routes = {
@@ -26,6 +27,7 @@ const router = async () => {
   let render = routes[route] ? routes[route] : NotFound404;
 
   main.innerHTML = await render();
+  Events();
 };
 
 export default router;

@@ -6,6 +6,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .container_logo {
@@ -33,12 +34,13 @@ header {
 }
 
 .search_and-genre {
-  width: 70%;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .search_container {
@@ -114,4 +116,105 @@ header {
 
 .genre_name:hover {
   color: #fc8621;
+}
+
+.buton_menu {
+  position: absolute;
+  top: 15px;
+  right: -5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1b45;
+  overflow: hidden;
+  z-index: 1000;
+  transition: ease-in-out 0.4s;
+}
+
+.buton_menuOpen {
+  background-color: #fc8621;
+}
+
+.line {
+  width: 80%;
+  border: 1px solid #fff;
+  transition: ease-in-out 0.4s;
+  position: absolute;
+  transform: translateX(0);
+}
+
+.one {
+  transform: translateY(-10px);
+}
+
+.oneOpen {
+  transform: rotate(45deg);
+  border: 1px solid #1b1b45;
+}
+
+.two {
+  transform: translate(0);
+}
+
+.twoOpen {
+  transform: translate(115%);
+  border: 1px solid #1b1b45;
+}
+
+.tree {
+  transform: translateY(10px);
+}
+
+.treeOpen {
+  transform: rotate(-45deg);
+  border: 1px solid #1b1b45;
+}
+
+@media screen and (max-width: 800px) {
+  .search_and-genre {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search_and-genre {
+    width: 60%;
+    justify-content: flex-end;
+  }
+
+  .search {
+    width: 80%;
+  }
+
+  .loupe_container {
+    width: 20%;
+  }
+
+  .genre_container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+
+    background-color: #1b1b45;
+    z-index: 500;
+    transition: ease-in-out 0.4s;
+  }
+
+  .genre_containerOpen {
+    left: 35%;
+  }
+
+  .buton_menu {
+    display: flex;
+  }
 }

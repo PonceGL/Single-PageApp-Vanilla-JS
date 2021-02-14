@@ -25,7 +25,7 @@ const Genre = async () => {
   } else {
     return `
           <div class="Section_title-container">
-              <h2 class="Section_title">${genero}</h2>
+            <h2 class="Section_title">${genero}</h2>
           </div>
           <div class="Section_container-movies">
               ${filterMovies

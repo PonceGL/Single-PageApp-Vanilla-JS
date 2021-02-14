@@ -72,3 +72,9 @@
   font-weight: 500;
   color: #fff;
 }
+
+@media screen and (max-width: 500px) {
+  .Section_title-container {
+    max-width: 90%;
+  }
+}
