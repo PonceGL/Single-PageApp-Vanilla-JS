@@ -7,17 +7,17 @@ const { TMDB } = API_KEY();
 
 const DetailsMovie = async () => {
   const id = window.location.hash.slice(1).split('/')[2];
-  const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB}`;
+  const URL = `https://api.themoviedb.org/3/tv/${id}?api_key=${TMDB}`;
   const details = await getData(URL);
   const view = `
         <div class="Details-container">
             <div class="details_image-conatiner">
-                <img class="details_image" src="https://www.themoviedb.org/t/p/w220_and_h330_face/${
-                  details.backdrop_path
-                }" alt="Poster ${details.original_title}">
+                <img class="details_image" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${
+                  details.poster_path
+                }" alt="Poster ${details.original_name}">
             </div>
             <div class="details_info-conatiner">
-                <h1 class="details_title">${details.original_title}</h1>
+                <h1 class="details_title">${details.original_name}</h1>
                 <div class="details_info-votes">
                     <div class="details_info-votes-container">
                         <div class="votes_circle">
@@ -25,10 +25,16 @@ const DetailsMovie = async () => {
                         </div>
                     </div>
                     <p class="details_counts">Voters: ${details.vote_count}</p>
-                    <p class="details_year">Year: ${details.release_date.slice(
+                    <p class="details_year">Year: ${details.first_air_date.slice(
                       0,
                       4
                     )}</p>
+                    <p class="details_LastEpisode">Episodes: ${
+                      details.number_of_episodes
+                    }</p>
+                    <p class="details_seasons">Seasons: ${
+                      details.seasons.length
+                    }</p>
                 </div>
                 <div>
                     ${details.genres

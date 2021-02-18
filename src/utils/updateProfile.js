@@ -1,4 +1,5 @@
-import firebaseApp from '../utils/firebaseApp';
+import firebaseApp from './firebaseApp';
+import dataBaseFirebase from './dataBaseFirebase';
 const { firebase } = firebaseApp();
 
 const updateProfile = (Name) => {
@@ -8,10 +9,10 @@ const updateProfile = (Name) => {
     .updateProfile({
       displayName: Name,
     })
-    .then(function () {
-      // Update successful.
+    .then(() => {
+      dataBaseFirebase(user);
     })
-    .catch(function (error) {
+    .catch((error) => {
       console.log(error);
     });
 };

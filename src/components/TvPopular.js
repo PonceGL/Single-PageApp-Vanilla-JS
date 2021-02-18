@@ -14,7 +14,7 @@ const TvPopular = async () => {
             ${tvs.results
               .map(
                 (tv) => `
-                <a href="#/movie/${tv.id}/${tv.original_name.replace(
+                <a href="#/tvshow/${tv.id}/${tv.original_name.replace(
                   / /g,
                   '-'
                 )}" class="item_link-image" data-name="${

@@ -12,11 +12,17 @@ const Header = async () => {
   const view = `
       <nav class="Menu_container" id="Menu_container">
         <ul class="Menu_list">
-          <li class="Menu_item">
-            <a href="#/login/" class="Menu_link" id="Login">Log in</a>
+          <li class="Menu_item" id="Login">
+            <a href="#/login/" class="Menu_link">Log in</a>
           </li>
-          <li class="Menu_item">
-            <a href="#/join//" class="Menu_link" id="Join">Join</a>
+          <li class="Menu_item" id="Join">
+            <a href="#/join//" class="Menu_link">Join</a>
+          </li>
+          <li class="Menu_item" id="NameUser">
+            <a href="#/" class="Menu_link">NameUser</a>
+          </li>
+          <li class="Menu_item" id="Logaut">
+            <a href="#/" class="Menu_link">Log aut</a>
           </li>
           <div class="Menu_item buton_menu" id="buton_menu">
             <div class="line one"></div>
@@ -58,20 +64,3 @@ const Header = async () => {
 };
 
 export default Header;
-
-{
-  /* <nav class="genre_container">
-${data.genres
-  .map(
-    (genre) => `
-    <li class="genre_element" data-genre_id="${genre.id}">
-      <a href="#/genre/${genre.id}/${genre.name.replace(
-      / /g,
-      '-'
-    )}" class="genre_name">${genre.name}</a>
-    </li>
-  `
-  )
-  .join('')}
-</nav> */
-}

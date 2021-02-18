@@ -2,8 +2,9 @@ import '../styles/Join.css';
 
 const Join = () => {
   const view = `
-        <h2>Join</h2>
         <div class="form_container">
+          <h2 class="title_login">Join</h2>
+          <p class="info_join">Join Movies For All, and manage your list to watch</p>
             <form class="form_join" id="form_Join">
                 <label for="Name_Join" class="form-label">Name</label>
                 <input type="text" class="form-input" id="Name_Join">

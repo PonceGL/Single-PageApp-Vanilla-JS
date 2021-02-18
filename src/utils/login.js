@@ -1,7 +1,7 @@
-import firebaseApp from '../utils/firebaseApp';
+import firebaseApp from './firebaseApp';
 const { firebase } = firebaseApp();
 
-const authentication = () => {
+const login = () => {
   const formLogin = document.getElementById('form_Login');
 
   const Login = (e) => {
@@ -14,8 +14,6 @@ const authentication = () => {
       .signInWithEmailAndPassword(Email, Password)
       .then((user) => {
         formLogin.reset();
-        console.log(user);
-        console.log('Logeado');
       })
       .catch((error) => {
         var errorCode = error.code;
@@ -26,25 +24,6 @@ const authentication = () => {
   };
 
   formLogin.addEventListener('submit', Login);
-
-  const logautButtom = document.getElementById('logaut_buttom');
-
-  const Logaut = (e) => {
-    e.preventDefault();
-    firebase
-      .auth()
-      .signOut()
-      .then(
-        () => {
-          console.log('Signed Out');
-        },
-        function (error) {
-          console.error('Sign Out Error', error);
-        }
-      );
-  };
-
-  logautButtom.addEventListener('click', Logaut);
 };
 
-export default authentication;
+export default login;

@@ -19,11 +19,10 @@ const register = () => {
         updateProfile(Name);
       })
       .catch((error) => {
-        var errorCode = error.code;
+        const errorCode = error.code;
         console.log(errorCode);
-        var errorMessage = error.message;
+        const errorMessage = error.message;
         console.log(errorMessage);
-        // ..
       });
   };
 

@@ -14,7 +14,7 @@ header {
   left: 0;
   right: 0;
   padding: 10px;
-  background-color: #1b1b45;
+  background-color: #086972;
 
   display: flex;
   justify-content: flex-end;
@@ -33,8 +33,12 @@ header {
 }
 
 .Menu_link {
-  color: #fff;
+  color: #87dfd6;
   font-weight: 400;
+}
+
+.Menu_link:hover {
+  color: #ff4b5c;
 }
 
 .Logo_link {
@@ -53,11 +57,11 @@ header {
 
 .Title {
   margin: 5px;
-  color: #fff;
+  color: #086972;
 }
 
 .Title:hover {
-  color: #fc8621;
+  color: #ff4b5c;
 }
 
 .search_and-genre {
@@ -87,22 +91,22 @@ header {
   outline: none;
   border: 2px solid transparent;
   border-radius: 5px 0 0 5px;
-  background-color: #fff;
+  background-color: #086972;
 }
 
 .search::placeholder {
-  color: #43656c;
+  color: #87dfd6;
   text-transform: capitalize;
 }
 
 .search:focus {
   background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #086972;
+  color: #086972;
 }
 
 .search:focus::placeholder {
-  color: #fff;
+  color: #086972;
 }
 
 .loupe_container {
@@ -114,7 +118,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fc8621;
+  background-color: #ff4b5c;
   border-radius: 0 5px 5px 0;
 }
 
@@ -137,11 +141,11 @@ header {
 }
 
 .genre_name {
-  color: #fff;
+  color: #086972;
 }
 
 .genre_name:hover {
-  color: #fc8621;
+  color: #ff4b5c;
 }
 
 .buton_menu {
@@ -153,19 +157,19 @@ header {
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: #1b1b45;
+  background-color: #87dfd6;
   overflow: hidden;
   z-index: 1000;
   transition: ease-in-out 0.4s;
 }
 
 .buton_menuOpen {
-  background-color: #fc8621;
+  background-color: #ff4b5c;
 }
 
 .line {
   width: 80%;
-  border: 1px solid #fff;
+  border: 1px solid #086972;
   transition: ease-in-out 0.4s;
   position: absolute;
   transform: translateX(0);
@@ -177,7 +181,7 @@ header {
 
 .oneOpen {
   transform: rotate(45deg);
-  border: 1px solid #1b1b45;
+  border: 1px solid #87dfd6;
 }
 
 .two {
@@ -186,7 +190,7 @@ header {
 
 .twoOpen {
   width: 0;
-  border: 1px solid #1b1b45;
+  border: 1px solid #87dfd6;
 }
 
 .tree {
@@ -195,7 +199,7 @@ header {
 
 .treeOpen {
   transform: rotate(-45deg);
-  border: 1px solid #1b1b45;
+  border: 1px solid #87dfd6;
 }
 
 @media screen and (max-width: 800px) {
@@ -242,11 +246,15 @@ header {
   }
 
   .search_container {
-    width: 70%;
+    width: 89%;
+  }
+  .search {
+    border-radius: 0;
   }
 
   .loupe_container {
     width: 20%;
+    border-radius: 0;
   }
 
   .genre_container {
@@ -264,7 +272,7 @@ header {
     left: 100%;
     overflow: scroll;
 
-    background-color: #1b1b45;
+    background-color: #87dfd6;
     z-index: 500;
     transition: ease-in-out 0.4s;
   }
