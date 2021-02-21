@@ -1,10 +1,10 @@
 import getData from '../utils/getData';
 import API_KEY from '../apikey';
-const { TMDB } = API_KEY();
-const URL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${TMDB}`;
 import Logo from '../assets/camera-roll.svg';
 import loupe from '../assets/loupe.svg';
 import '../styles/Header.css';
+const { TMDB } = API_KEY();
+const URL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${TMDB}`;
 
 const Header = async () => {
   const data = await getData(URL);
@@ -19,7 +19,6 @@ const Header = async () => {
             <a href="#/join//" class="Menu_link">Join</a>
           </li>
           <li class="Menu_item" id="NameUser">
-            <a href="#/" class="Menu_link">NameUser</a>
           </li>
           <li class="Menu_item" id="Logaut">
             <a href="#/" class="Menu_link">Log aut</a>

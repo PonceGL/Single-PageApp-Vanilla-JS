@@ -16,7 +16,7 @@ const currentUser = () => {
       join.style.display = 'none';
       logaut.style.display = 'block';
       nameUser.style.display = 'block';
-      nameUser.innerHTML = `<a href="#/" class="Menu_link">${name}</a>`;
+      nameUser.innerHTML = `<a href="#/watch-list/${user.displayName}" class="Menu_link">${name}</a>`;
     } else {
       login.style.display = 'block';
       join.style.display = 'block';

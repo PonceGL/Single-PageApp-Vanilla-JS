@@ -7,6 +7,7 @@ import DetailsTv from '../containers/DetailsTv';
 import Genre from '../components/Genre';
 import Header from '../components/Header';
 import getHash from '../utils/getHash';
+import User from '../containers/User';
 import resolveRoutes from '../utils/resolveRoutes';
 import slidingMenu from '../utils/slidingMenu';
 import register from '../utils/register';
@@ -19,8 +20,10 @@ const routes = {
   '/movie/': DetailsMovie,
   '/tvshow': DetailsTv,
   '/genre/': Genre,
+  '/watch-': User,
   '/login/': Login,
   '/join//': Join,
+  '/swipe/': Swipe,
 };
 
 const router = async () => {

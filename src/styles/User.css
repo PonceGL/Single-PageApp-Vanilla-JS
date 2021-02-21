@@ -1,0 +1,97 @@
+.watch-list_section {
+  width: 95%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #086972;
+  color: #87dfd6;
+}
+
+.watch-list_conatiner_title {
+  margin: 10px auto;
+}
+
+.watch-list_title {
+  font-size: 30px;
+}
+
+.watch-list_container_sections {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.watch-list_sections {
+  width: 45%;
+  margin: 10px auto;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.watch-list_sections_titles {
+  margin: 10px auto;
+}
+
+.watch-list_items_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.watch-list_item {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: ease-in-out 0.3s;
+  position: relative;
+}
+
+.watch-list_item:hover {
+  background-color: #87dfd6;
+}
+
+.watch-list_item_image {
+  height: 100px;
+  margin-right: 5%;
+  margin-left: 2%;
+}
+
+.watch-list_item_link {
+  color: #87dfd6;
+}
+
+.watch-list_item:hover .watch-list_item_link {
+  color: #086972;
+}
+
+.menosWatchList {
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .watch-list_conatiner_title {
+    margin-top: 40px;
+  }
+  .watch-list_container_sections {
+    flex-direction: column;
+  }
+  .watch-list_sections {
+    width: 100%;
+    margin: 40px auto;
+  }
+}

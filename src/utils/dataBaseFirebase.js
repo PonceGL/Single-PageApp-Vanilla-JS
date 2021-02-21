@@ -2,7 +2,7 @@ import firebaseApp from './firebaseApp';
 
 const { firebase } = firebaseApp();
 
-const dataBaseFirebase = (user, id = null, movie = null) => {
+const dataBaseFirebase = (user, id, movieOrSeries) => {
   let moviesList;
   let tvShowsList;
 
@@ -16,28 +16,32 @@ const dataBaseFirebase = (user, id = null, movie = null) => {
       tvShowsList = filter[0].data().watchlist.tvShows;
     })
     .then(() => {
-      if (movie === 'movie') {
-        moviesList.push(id);
-      } else if (movie === 'tvshow') {
-        tvShowsList.push(id);
+      if (id != null && movieOrSeries != null) {
+        if (movieOrSeries === 'movie') {
+          moviesList.push(id);
+        } else if (movieOrSeries === 'tvshow') {
+          tvShowsList.push(id);
+        }
       }
     })
     .then(() => {
-      firebase
-        .firestore()
-        .collection('users')
-        .doc(user.uid)
-        .set({
-          info: {
-            email: user.email,
-            name: user.displayName,
-            photo: user.photoURL,
-          },
-          watchlist: {
-            movies: moviesList,
-            tvShows: tvShowsList,
-          },
-        });
+      if (id != null && movieOrSeries != null) {
+        firebase
+          .firestore()
+          .collection('users')
+          .doc(user.uid)
+          .set({
+            info: {
+              email: user.email,
+              name: user.displayName,
+              photo: user.photoURL,
+            },
+            watchlist: {
+              movies: moviesList,
+              tvShows: tvShowsList,
+            },
+          });
+      }
     })
     .catch((error) => {
       console.log('Error getting document:', error);
