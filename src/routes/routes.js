@@ -23,7 +23,6 @@ const routes = {
   '/watch-': User,
   '/login/': Login,
   '/join//': Join,
-  '/swipe/': Swipe,
 };
 
 const router = async () => {
